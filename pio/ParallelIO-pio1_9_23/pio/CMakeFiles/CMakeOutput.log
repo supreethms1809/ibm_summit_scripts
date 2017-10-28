@@ -1,0 +1,382 @@
+The system is: Linux - 3.10.0-537.el7.bz1409122.1.ppc64le - ppc64le
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /shared/comms/openmpi-2.0.1/pgi/bin/mpicc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/3.7.0/CompilerIdC/a.out"
+
+Compiling the Fortran compiler identification source file "CMakeFortranCompilerId.F" succeeded.
+Compiler: /shared/comms/openmpi-2.0.1/pgi/bin/mpif90 
+Build flags: 
+Id flags: -v
+
+The output was:
+0
+Export PGI=/autofs/home/ssuresh/modules/pgi/pgi_ppc_174
+
+/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/bin/pgf901-llvm CMakeFortranCompilerId.F -opt 1 -nohpf -nostatic -x 19 0x400000 -quad -x 15 2 -x 49 0x400004 -x 51 0x20 -x 57 0x4c -x 58 0x10000 -x 124 0x1000 -x 57 0xfb0000 -x 58 0x78031040 -x 47 0x08 -x 48 4608 -x 49 0x100 -stdinc /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/include:/usr/local/include:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/include:/usr/local/include:/usr/include:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/include:/usr/include -cmdline '+pgf90 CMakeFortranCompilerId.F -v -I/shared/comms/openmpi-2.0.1/pgi/include -I/shared/comms/openmpi-2.0.1/pgi/lib -L/shared/comms/openmpi-2.0.1/pgi/lib -Wl,-rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil' -def __STDC_HOSTED__ -idir /shared/comms/openmpi-2.0.1/pgi/include -idir /shared/comms/openmpi-2.0.1/pgi/lib -def __power__ -def __powerpc__ -def __powerpc64__ -def __PPC__ -def __PPC64__ -def __LP64__ -def __LITTLE_ENDIAN__ -def _CALL_ELF=2 -def __PGLLVM__ -def __extension__= -def __linux__ -def __linux -def linux -preprocess -nofreeform -vect 48 -y 54 1 -x 68 0x1 -x 49 0x40000000 -x 70 0x40000000 -y 163 0xc0000000 -x 189 0x10 -stbfile /tmp/pgf9053PNRqnuOlLp.stb -modexport /tmp/pgf90b3PNdwx2x7el.cmod -modindex /tmp/pgf90j3PNBgYTeQ04.cmdx -output /tmp/pgf90X3PNtEHBoJM-.ilm
+  0 inform,   0 warnings,   0 severes, 0 fatal for cmakefortrancompilerid
+PGF90/power Linux 17.4-0: compilation successful
+
+/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/bin/pgf902-llvm /tmp/pgf90X3PNtEHBoJM-.ilm -fn CMakeFortranCompilerId.F -opt 1 -x 51 0x20 -x 119 0xa10000 -x 122 0x40 -x 123 0x1000 -x 127 4 -x 127 17 -x 119 0x40000000 -x 19 0x400000 -x 120 0x10000000 -x 70 0x8000 -x 122 1 -x 125 0x20000 -x 56 0x40 -x 120 0x1000 -x 124 0x1400 -y 15 2 -x 57 0x3b0000 -x 58 0x48000000 -x 49 0x100 -astype 0 -x 183 4 -x 121 0x800 -x 70 0x40000000 -x 54 0x10 -x 249 39 -x 68 0x1 -x 49 0x40000000 -x 124 1 -y 163 0xc0000000 -x 189 0x10 -y 189 0x4000000 -cmdline '+pgf90 CMakeFortranCompilerId.F -v -I/shared/comms/openmpi-2.0.1/pgi/include -I/shared/comms/openmpi-2.0.1/pgi/lib -L/shared/comms/openmpi-2.0.1/pgi/lib -Wl,-rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil' -stbfile /tmp/pgf9053PNRqnuOlLp.stb -asm /tmp/pgf90z3PNliAvBPmk.ll
+  0 inform,   0 warnings,   0 severes, 0 fatal for cmakefortrancompilerid
+PGF90/power Linux 17.4-0: compilation successful
+
+/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/share/llvm/bin/llc /tmp/pgf90z3PNliAvBPmk.ll -mcpu=native -O0 -fast-isel=0 -enable-tail-merge-return=0 -code-model=large -o /tmp/pgf90H3PNJjlrKRJe.s
+
+/usr/bin/as /tmp/pgf90H3PNJjlrKRJe.s -mpower8 -many -o /tmp/pgf90X3PNtfhG4739.o
+
+/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/bin/pgappend -noerror /tmp/pgf90X3PNtfhG4739.o -name .IPDINFO /tmp/pgf90b3PNdwx2x7el.cmod -name .IPEINFO /tmp/pgf90j3PNBgYTeQ04.cmdx
+
+/usr/bin/ld /usr/lib64/crt1.o /usr/lib64/crti.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/f90main.o -dynamic-linker /lib64/ld64.so.2 /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/pgi.ld --no-tls-optimize -L/shared/comms/openmpi-2.0.1/pgi/lib -L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -L/usr/lib64 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 /tmp/pgf90X3PNtfhG4739.o -rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil -rpath /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -lpgf90rtl -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgf90rtl -lpgftnrtl -lpgkomp -lpgompstub -ldl -lpthread -lpgc -lrt -lpthread -lmass_simdp8 -lmassvp8 -lmass -lm -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o /usr/lib64/crtn.o
+Unlinking /tmp/pgf90X3PNtEHBoJM-.ilm
+Unlinking /tmp/pgf9053PNRqnuOlLp.stb
+Unlinking /tmp/pgf90b3PNdwx2x7el.cmod
+Unlinking /tmp/pgf90j3PNBgYTeQ04.cmdx
+Unlinking /tmp/pgf90r3PNZ5IeBDQI.s
+Unlinking /tmp/pgf90z3PNliAvBPmk.ll
+Unlinking /tmp/pgf90H3PNJjlrKRJe.s
+Unlinking /tmp/pgf90P3PN7veVc1pJ.llvm
+Unlinking /tmp/pgf90X3PNtfhG4739.o
+
+
+Compilation of the Fortran compiler identification source "CMakeFortranCompilerId.F" produced "a.out"
+
+The Fortran compiler identification is PGI, found in "/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/3.7.0/CompilerIdFortran/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_4ba5b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_4ba5b.dir/build.make CMakeFiles/cmTC_4ba5b.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4ba5b.dir/testCCompiler.c.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc     -o CMakeFiles/cmTC_4ba5b.dir/testCCompiler.c.o   -c /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_4ba5b
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ba5b.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc       CMakeFiles/cmTC_4ba5b.dir/testCCompiler.c.o  -o cmTC_4ba5b -rdynamic 
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_8cc33/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8cc33.dir/build.make CMakeFiles/cmTC_8cc33.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc     -o CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o   -c /autofs/shared/ext_sw/cmake-3.7.0/share/cmake-3.7/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_8cc33
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cc33.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc      -v CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o  -o cmTC_8cc33 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/lto-wrapper
+Target: ppc64le-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-ppc64le-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-ppc64le-redhat-linux/cloog-install --enable-gnu-indirect-function --enable-secureplt --with-long-double-128 --enable-targets=powerpcle-linux --disable-multilib --with-cpu-64=power8 --with-tune-64=power8 --build=ppc64le-redhat-linux
+Thread model: posix
+gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/:/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/:/usr/libexec/gcc/ppc64le-redhat-linux/:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/:/usr/lib/gcc/ppc64le-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/shared/comms/openmpi-2.0.1/pgi/lib/:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cc33' '-rdynamic' '-I' '/shared/comms/openmpi-2.0.1/pgi/include' '-L/shared/comms/openmpi-2.0.1/pgi/lib' '-mtune=power8' '-mcpu=power8'
+ /usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -V -m elf64lppc -export-dynamic -dynamic-linker /lib64/ld64.so.2 -o cmTC_8cc33 /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o -L/shared/comms/openmpi-2.0.1/pgi/lib -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/shared/comms/openmpi-2.0.1/pgi/lib -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o -rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi -lpthread -lm -lutil -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crtn.o
+GNU ld version 2.25.1-22.base.el7 
+  Supported emulations:
+   elf64lppc
+   elf32lppc
+   elf32lppclinux
+   elf32lppcsim
+   elf32_spu
+   elf32ppclinux
+   elf32ppc
+   elf32ppcsim
+   elf64ppc
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_8cc33/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_8cc33.dir/build.make CMakeFiles/cmTC_8cc33.dir/build]
+  ignore line: [gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/shared/comms/openmpi-2.0.1/pgi/bin/mpicc     -o CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o   -c /autofs/shared/ext_sw/cmake-3.7.0/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_8cc33]
+  ignore line: [/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cc33.dir/link.txt --verbose=1]
+  ignore line: [/shared/comms/openmpi-2.0.1/pgi/bin/mpicc      -v CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o  -o cmTC_8cc33 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/lto-wrapper]
+  ignore line: [Target: ppc64le-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-ppc64le-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-ppc64le-redhat-linux/cloog-install --enable-gnu-indirect-function --enable-secureplt --with-long-double-128 --enable-targets=powerpcle-linux --disable-multilib --with-cpu-64=power8 --with-tune-64=power8 --build=ppc64le-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/:/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/:/usr/libexec/gcc/ppc64le-redhat-linux/:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/:/usr/lib/gcc/ppc64le-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/shared/comms/openmpi-2.0.1/pgi/lib/:/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cc33' '-rdynamic' '-I' '/shared/comms/openmpi-2.0.1/pgi/include' '-L/shared/comms/openmpi-2.0.1/pgi/lib' '-mtune=power8' '-mcpu=power8']
+  link line: [ /usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -V -m elf64lppc -export-dynamic -dynamic-linker /lib64/ld64.so.2 -o cmTC_8cc33 /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o -L/shared/comms/openmpi-2.0.1/pgi/lib -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/shared/comms/openmpi-2.0.1/pgi/lib -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o -rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi -lpthread -lm -lutil -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/ppc64le-redhat-linux/4.8.5/collect2] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-V] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf64lppc] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_8cc33] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o] ==> ignore
+    arg [-L/shared/comms/openmpi-2.0.1/pgi/lib] ==> dir [/shared/comms/openmpi-2.0.1/pgi/lib]
+    arg [-L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5]
+    arg [-L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64] ==> dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/shared/comms/openmpi-2.0.1/pgi/lib] ==> dir [/shared/comms/openmpi-2.0.1/pgi/lib]
+    arg [-L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../..]
+    arg [CMakeFiles/cmTC_8cc33.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-rpath=/shared/comms/openmpi-2.0.1/pgi/lib] ==> ignore
+    arg [-lmpi] ==> lib [mpi]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lm] ==> lib [m]
+    arg [-lutil] ==> lib [util]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/shared/comms/openmpi-2.0.1/pgi/lib] ==> [/shared/comms/openmpi-2.0.1/pgi/lib]
+  collapse library dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5] ==> [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5]
+  collapse library dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/shared/comms/openmpi-2.0.1/pgi/lib] ==> [/shared/comms/openmpi-2.0.1/pgi/lib]
+  collapse library dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/../../..] ==> [/usr/lib]
+  implicit libs: [mpi;pthread;m;util;c]
+  implicit dirs: [/shared/comms/openmpi-2.0.1/pgi/lib;/usr/lib/gcc/ppc64le-redhat-linux/4.8.5;/usr/lib64;/lib64;/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f5693/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f5693.dir/build.make CMakeFiles/cmTC_f5693.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f5693.dir/feature_tests.c.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc    -std=c11 -o CMakeFiles/cmTC_f5693.dir/feature_tests.c.o   -c /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f5693
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5693.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc       CMakeFiles/cmTC_f5693.dir/feature_tests.c.o  -o cmTC_f5693 -rdynamic 
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_4fe8d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_4fe8d.dir/build.make CMakeFiles/cmTC_4fe8d.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4fe8d.dir/feature_tests.c.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc    -std=c99 -o CMakeFiles/cmTC_4fe8d.dir/feature_tests.c.o   -c /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/feature_tests.c
+Linking C executable cmTC_4fe8d
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4fe8d.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc       CMakeFiles/cmTC_4fe8d.dir/feature_tests.c.o  -o cmTC_4fe8d -rdynamic 
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_893d5/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_893d5.dir/build.make CMakeFiles/cmTC_893d5.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_893d5.dir/feature_tests.c.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc    -std=c90 -o CMakeFiles/cmTC_893d5.dir/feature_tests.c.o   -c /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/feature_tests.c
+Linking C executable cmTC_893d5
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_893d5.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc       CMakeFiles/cmTC_893d5.dir/feature_tests.c.o  -o cmTC_893d5 -rdynamic 
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the Fortran compiler works passed with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_5ef4d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5ef4d.dir/build.make CMakeFiles/cmTC_5ef4d.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building Fortran object CMakeFiles/cmTC_5ef4d.dir/testFortranCompiler.f.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpif90    -Mpreprocess -Kieee    -c /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp/testFortranCompiler.f -o CMakeFiles/cmTC_5ef4d.dir/testFortranCompiler.f.o
+Linking Fortran executable cmTC_5ef4d
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ef4d.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpif90     -Mpreprocess -Kieee  CMakeFiles/cmTC_5ef4d.dir/testFortranCompiler.f.o  -o cmTC_5ef4d  
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+Detecting Fortran compiler ABI info compiled with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_2498d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_2498d.dir/build.make CMakeFiles/cmTC_2498d.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building Fortran object CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpif90    -Mpreprocess -Kieee    -c /autofs/shared/ext_sw/cmake-3.7.0/share/cmake-3.7/Modules/CMakeFortranCompilerABI.F -o CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o
+Linking Fortran executable cmTC_2498d
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2498d.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpif90    -v -Mpreprocess -Kieee  CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o  -o cmTC_2498d   
+Export PGI=/autofs/home/ssuresh/modules/pgi/pgi_ppc_174
+
+/usr/bin/ld /usr/lib64/crt1.o /usr/lib64/crti.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/f90main.o -dynamic-linker /lib64/ld64.so.2 /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/pgi.ld --no-tls-optimize -L/shared/comms/openmpi-2.0.1/pgi/lib -L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -L/usr/lib64 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o -rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil -rpath /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -o cmTC_2498d -lpgf90rtl -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgf90rtl -lpgftnrtl -lpgkomp -lpgompstub -ldl -lpthread -lpgc -lrt -lpthread -lmass_simdp8 -lmassvp8 -lmass -lm -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o /usr/lib64/crtn.o
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+Parsed Fortran implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_2498d/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_2498d.dir/build.make CMakeFiles/cmTC_2498d.dir/build]
+  ignore line: [gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp']
+  ignore line: [Building Fortran object CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o]
+  ignore line: [/shared/comms/openmpi-2.0.1/pgi/bin/mpif90    -Mpreprocess -Kieee    -c /autofs/shared/ext_sw/cmake-3.7.0/share/cmake-3.7/Modules/CMakeFortranCompilerABI.F -o CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o]
+  ignore line: [Linking Fortran executable cmTC_2498d]
+  ignore line: [/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2498d.dir/link.txt --verbose=1]
+  ignore line: [/shared/comms/openmpi-2.0.1/pgi/bin/mpif90    -v -Mpreprocess -Kieee  CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o  -o cmTC_2498d   ]
+  ignore line: [Export PGI=/autofs/home/ssuresh/modules/pgi/pgi_ppc_174]
+  ignore line: []
+  link line: [/usr/bin/ld /usr/lib64/crt1.o /usr/lib64/crti.o /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/f90main.o -dynamic-linker /lib64/ld64.so.2 /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/pgi.ld --no-tls-optimize -L/shared/comms/openmpi-2.0.1/pgi/lib -L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -L/usr/lib64 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o -rpath=/shared/comms/openmpi-2.0.1/pgi/lib -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil -rpath /autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -o cmTC_2498d -lpgf90rtl -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgf90rtl -lpgftnrtl -lpgkomp -lpgompstub -ldl -lpthread -lpgc -lrt -lpthread -lmass_simdp8 -lmassvp8 -lmass -lm -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o /usr/lib64/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [/usr/lib64/crt1.o] ==> ignore
+    arg [/usr/lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtbegin.o] ==> ignore
+    arg [/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/f90main.o] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld64.so.2] ==> ignore
+    arg [/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib/pgi.ld] ==> ignore
+    arg [--no-tls-optimize] ==> ignore
+    arg [-L/shared/comms/openmpi-2.0.1/pgi/lib] ==> dir [/shared/comms/openmpi-2.0.1/pgi/lib]
+    arg [-L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib] ==> dir [/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib]
+    arg [-L/usr/lib64] ==> dir [/usr/lib64]
+    arg [-L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5]
+    arg [CMakeFiles/cmTC_2498d.dir/CMakeFortranCompilerABI.F.o] ==> ignore
+    arg [-rpath=/shared/comms/openmpi-2.0.1/pgi/lib] ==> ignore
+    arg [-lmpi_usempi_ignore_tkr] ==> lib [mpi_usempi_ignore_tkr]
+    arg [-lmpi_mpifh] ==> lib [mpi_mpifh]
+    arg [-lmpi] ==> lib [mpi]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lm] ==> lib [m]
+    arg [-lutil] ==> lib [util]
+    arg [-rpath] ==> ignore
+    arg [/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_2498d] ==> ignore
+    arg [-lpgf90rtl] ==> lib [pgf90rtl]
+    arg [-lpgf90] ==> lib [pgf90]
+    arg [-lpgf90_rpm1] ==> lib [pgf90_rpm1]
+    arg [-lpgf902] ==> lib [pgf902]
+    arg [-lpgf90rtl] ==> lib [pgf90rtl]
+    arg [-lpgftnrtl] ==> lib [pgftnrtl]
+    arg [-lpgkomp] ==> lib [pgkomp]
+    arg [-lpgompstub] ==> lib [pgompstub]
+    arg [-ldl] ==> lib [dl]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lpgc] ==> lib [pgc]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lmass_simdp8] ==> lib [mass_simdp8]
+    arg [-lmassvp8] ==> lib [massvp8]
+    arg [-lmass] ==> lib [mass]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5/crtend.o] ==> ignore
+    arg [/usr/lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/shared/comms/openmpi-2.0.1/pgi/lib] ==> [/shared/comms/openmpi-2.0.1/pgi/lib]
+  collapse library dir [/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib] ==> [/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib]
+  collapse library dir [/usr/lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5] ==> [/usr/lib/gcc/ppc64le-redhat-linux/4.8.5]
+  implicit libs: [mpi_usempi_ignore_tkr;mpi_mpifh;mpi;pthread;m;util;pgf90rtl;pgf90;pgf90_rpm1;pgf902;pgf90rtl;pgftnrtl;pgkomp;pgompstub;dl;pthread;pgc;rt;pthread;mass_simdp8;massvp8;mass;m;c]
+  implicit dirs: [/shared/comms/openmpi-2.0.1/pgi/lib;/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib;/usr/lib64;/usr/lib/gcc/ppc64le-redhat-linux/4.8.5]
+  implicit fwks: []
+
+
+Determining if the Fortran compiler supports Fortran 90 passed with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_547cb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_547cb.dir/build.make CMakeFiles/cmTC_547cb.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building Fortran object CMakeFiles/cmTC_547cb.dir/testFortranCompilerF90.f90.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpif90    -Mpreprocess -Kieee    -c /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp/testFortranCompilerF90.f90 -o CMakeFiles/cmTC_547cb.dir/testFortranCompilerF90.f90.o
+Linking Fortran executable cmTC_547cb
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_547cb.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpif90     -Mpreprocess -Kieee  CMakeFiles/cmTC_547cb.dir/testFortranCompilerF90.f90.o  -o cmTC_547cb  
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ncmpi_get_varn exists passed with the following output:
+Change Dir: /home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_1e150/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_1e150.dir/build.make CMakeFiles/cmTC_1e150.dir/build
+gmake[1]: Entering directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e150.dir/CheckFunctionExists.c.o
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc    -DCHECK_FUNCTION_EXISTS=ncmpi_get_varn   -o CMakeFiles/cmTC_1e150.dir/CheckFunctionExists.c.o   -c /autofs/shared/ext_sw/cmake-3.7.0/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1e150
+/autofs/shared/ext_sw/cmake-3.7.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e150.dir/link.txt --verbose=1
+/shared/comms/openmpi-2.0.1/pgi/bin/mpicc   -DCHECK_FUNCTION_EXISTS=ncmpi_get_varn    CMakeFiles/cmTC_1e150.dir/CheckFunctionExists.c.o  -o cmTC_1e150 -rdynamic /home/ssuresh/modules/pnetcdf/pnetcdf180/lib/libpnetcdf.a 
+gmake[1]: Leaving directory `/autofs/home/ssuresh/modules/pio/ParallelIO-pio1_9_23/pio/CMakeFiles/CMakeTmp'
+
+

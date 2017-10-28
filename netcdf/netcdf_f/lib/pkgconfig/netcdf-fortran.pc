@@ -1,0 +1,15 @@
+prefix=/home/ssuresh/modules/netcdf/netcdf_f
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+ccompiler=pgcc
+fcompiler=mpif90
+
+Name: netcdf-fortran
+Description: NetCDF Client Library for Fortran
+URL: http://www.unidata.ucar.edu/netcdf
+Version: 4.4.4
+Requires.private: netcdf > 4.1.1
+Libs: -L${libdir} -lnetcdff
+Libs.private: -L${libdir} -lnetcdff -lnetcdf
+Cflags: -I${includedir}

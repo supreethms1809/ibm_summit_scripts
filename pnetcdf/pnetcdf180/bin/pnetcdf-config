@@ -1,0 +1,332 @@
+#! /bin/sh
+#
+# Copyright (C) 2016, Northwestern University and Argonne National Laboratory
+# See COPYRIGHT notice in top-level directory.
+#
+# This forms the basis for the pnetcdf-config utility, which tells you
+# various things about the PnetCDF installation. This code was based on
+# file nc-config.in from netCDF distribution.
+#
+# $Id$
+#
+# pnetcdf-config.  Generated from pnetcdf-config.in by configure.
+
+prefix="/home/ssuresh/modules/pnetcdf/pnetcdf180"
+exec_prefix="${prefix}"
+libdir="${exec_prefix}/lib"
+includedir="${prefix}/include"
+
+# Preprocessing:
+FC_DEFINE="-D"
+CPP="/shared/comms/openmpi-2.0.1/pgi/bin/mpicc -E"
+FPP=""
+
+if test "x0" = x1 ; then
+  CPPFLAGS=" -DPNETCDF_DEBUG"
+  CXXCPPFLAGS=" -DPNETCDF_DEBUG"
+  FPPFLAGS="  -DPNETCDF_DEBUG"
+else
+  CPPFLAGS=""
+  CXXCPPFLAGS=""
+  FPPFLAGS=" "
+fi
+
+# Compilation:
+MPICC="/shared/comms/openmpi-2.0.1/pgi/bin/mpicc"
+MPICXX="mpicxx"
+MPIF77="/shared/comms/openmpi-2.0.1/pgi/bin/mpif77"
+MPIF90="/shared/comms/openmpi-2.0.1/pgi/bin/mpif90"
+
+# debugging and optimization options for compiling and linking
+CFLAGS="-fPIC"
+CXXFLAGS=""
+F77FLAGS="-g "
+F90FLAGS="-g "
+
+# Linking:
+FLIBS=" -L/shared/comms/openmpi-2.0.1/pgi/lib -L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -L/usr/lib64 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil -lpgf90rtl -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgftnrtl -lpgkomp -lpgompstub -ldl -lpgc -lrt -lmass_simdp8 -lmassvp8 -lmass"
+FCLIBS=" -L/shared/comms/openmpi-2.0.1/pgi/lib -L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -L/usr/lib64 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil -lpgf90rtl -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgftnrtl -lpgkomp -lpgompstub -ldl -lpgc -lrt -lmass_simdp8 -lmassvp8 -lmass"
+F90LIBS=" -L/shared/comms/openmpi-2.0.1/pgi/lib -L/autofs/home/ssuresh/modules/pgi/pgi_ppc_174/linuxpower/17.4/lib -L/usr/lib64 -L/usr/lib/gcc/ppc64le-redhat-linux/4.8.5 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lpthread -lm -lutil -lpgf90rtl -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgftnrtl -lpgkomp -lpgompstub -ldl -lpgc -lrt -lmass_simdp8 -lmassvp8 -lmass"
+FLDFLAGS=""
+F90LDFLAGS=""
+LDFLAGS=""
+LIBS=""
+
+version="parallel-netcdf 1.8.0"
+CC=${MPICC}
+F77=${MPIF77}
+F90=${MPIF90}
+
+has_fortran="yes"
+has_cxx="no"
+
+config_date="Fri Oct 27 14:16:25 EDT 2017"
+release_date="19 Dec 2016"
+
+usage()
+{
+    cat <<EOF
+Usage: pnetcdf-config [OPTION]
+
+Available values for OPTION include:
+
+  --help               display this help message and exit
+  --all                display all options
+  --cc                 C compiler
+  --cflags             C compiler flags
+  --cppflags           C pre-processor flags
+  --has-c++            whether C++ API is installed
+  --c++                C++ compiler
+  --cxxflags           C++ compiler flags
+  --cxxppflags         C++ pre-processor flags
+  --has-fortran        whether Fortran API is installed
+  --f77                Fortran 77 compiler
+  --f77flags           Fortran 77 compiler flags
+  --fppflags           Fortran pre-processor flags
+  --f90                Fortran 90 compiler
+  --f90flags           Fortran 90 compiler flags
+  --ldflags            Linker options
+  --libs               Libraries used to build PnetCDF
+  --relax-coord-bound  Whether using a relaxed coordinate boundary check
+  --in-place-swap      Whether using buffer in-place Endianness byte swap
+  --erange-fill        Whether using fill values for NC_ERANGE error
+  --subfiling          Whether subfiling is enabled or disabled
+  --debug              Whether PnetCDF is built with debug mode
+  --prefix             Install prefix
+  --includedir         Include directory
+  --libdir             Library directory
+  --version            Library version
+  --release-date       Date of PnetCDF source was released
+  --config-date        Date of PnetCDF library was configured
+EOF
+    exit $1
+}
+
+all()
+{
+        echo
+        echo "This $version has been built with the following features: "
+        echo
+        echo "  --cc                -> $MPICC"
+        echo "  --cflags            -> $CFLAGS"
+        echo "  --cppflags          -> $CPPFLAGS"
+        echo "  --ldflags           -> $LDFLAGS"
+        echo "  --libs              -> $LIBS"
+        echo
+        echo "  --has-c++           -> $has_cxx"
+if test "x$has_cxx" = xyes ; then
+        echo "  --cxx               -> $MPICXX"
+        echo "  --cxxflags          -> $CXXFLAGS"
+        echo "  --cxxppflags        -> $CXXCPPFLAGS"
+fi
+        echo
+        echo "  --has-fortran       -> $has_fortran"
+if test "x$has_fortran" = xyes ; then
+        echo "  --f77               -> $MPIF77"
+        echo "  --f77flags          -> $F77FLAGS"
+        echo "  --fppflags          -> $FPPFLAGS"
+#        echo "  --f77libs           -> $FCLIBS"
+        echo
+        echo "  --f90               -> $MPIF90"
+        echo "  --f90flags          -> $F90FLAGS"
+#        echo "  --f90libs           -> $F90LIBS"
+fi
+        echo
+if test "x${enable_erange_fill}" = xno; then
+        echo "  --erange-fill       -> disabled"
+else
+        echo "  --erange-fill       -> enabled"
+fi
+if test "x0" = xyes; then
+        echo "  --subfiling         -> enabled"
+else
+        echo "  --subfiling         -> disabled"
+fi
+if test "x0" = xyes; then
+        echo "  --relax-coord-bound -> enabled"
+else
+        echo "  --relax-coord-bound -> disabled"
+fi
+if test "xno" = xno  && (test "xyes" = xno) ; then
+        echo "  --in-place-swap     -> disabled"
+else
+        echo "  --in-place-swap     -> enabled"
+fi
+if test "x0" = xyes; then
+        echo "  --debug             -> enabled"
+else
+        echo "  --debug             -> disabled"
+fi
+        echo
+        echo "  --prefix            -> $prefix"
+        echo "  --includedir        -> $includedir"
+        echo "  --libdir            -> $libdir"
+        echo "  --version           -> $version"
+        echo "  --release-date      -> $release_date"
+        echo "  --config-date       -> $config_date"
+}
+
+if test $# -eq 0; then
+    usage 1
+fi
+
+while test $# -gt 0; do
+    case "$1" in
+    # this deals with options in the style
+    # --option=value and extracts the value part
+    # [not currently used]
+    -*=*) value=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+    *) value= ;;
+    esac
+
+    case "$1" in
+
+    --help)
+        usage 0
+        ;;
+
+    --all)
+        all
+        ;;
+
+    --cc)
+        echo "$MPICC" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --cflags)
+        echo "$CFLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --cppflags)
+        echo "$CPPFLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --prefix)
+       echo "$prefix" | sed -e 's/^[ \t]*//'
+       ;;
+
+    --includedir)
+       echo "$includedir" | sed -e 's/^[ \t]*//'
+       ;;
+
+    --libdir)
+       echo "$libdir" | sed -e 's/^[ \t]*//'
+       ;;
+
+    --ldflags)
+       echo "$LDFLAGS" | sed -e 's/^[ \t]*//'
+       ;;
+
+    --libs)
+       echo "$LIBS" | sed -e 's/^[ \t]*//'
+       ;;
+
+    --version)
+        echo "$version" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --has-c++)
+        echo "$has_cxx" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --cxx)
+        echo "$MPICXX" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --cxxflags)
+        echo "$CXXFLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --cxxppflags)
+        echo "$CXXCPPFLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --has-fortran)
+        echo "$has_fortran" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --f77)
+        echo "$MPIF77" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --f77flags)
+        echo "$F77FLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --fppflags)
+        echo "$FPPFLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+#    --f77libs)
+#        echo "$FCLIBS" | sed -e 's/^[ \t]*//'
+#        ;;
+
+    --f90)
+        echo "$MPIF90" | sed -e 's/^[ \t]*//'
+        ;;
+
+    --f90flags)
+        echo "$F90FLAGS" | sed -e 's/^[ \t]*//'
+        ;;
+
+#    --f90libs)
+#        echo "$F90LIBS" | sed -e 's/^[ \t]*//'
+#        ;;
+
+    --relax-coord-bound)
+if test "x0" = xyes; then
+        echo "enabled"
+else
+        echo "disabled"
+fi
+        ;;
+
+    --in-place-swap)
+if test "xno" = xno  && (test "xyes" = xno) ; then
+        echo "disabled"
+else
+        echo "enabled"
+fi
+        ;;
+
+    --erange-fill)
+if test "x${enable_erange_fill}" = xno; then
+        echo "disabled"
+else
+        echo "enabled"
+fi
+        ;;
+
+    --subfiling)
+if test "x0" = xyes; then
+        echo "enabled"
+else
+        echo "disabled"
+fi
+        ;;
+
+    --debug)
+if test "x0" = xyes; then
+        echo "enabled"
+else
+        echo "disabled"
+fi
+        ;;
+
+    --release-date)
+        echo "$release_date"
+        ;;
+
+    --config-date)
+        echo "$config_date"
+        ;;
+
+    *)
+        echo "unknown option: $1"
+        usage 1
+        ;;
+    esac
+    shift
+done
+
+exit 0

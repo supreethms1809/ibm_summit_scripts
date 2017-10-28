@@ -1,0 +1,59 @@
+	    SUMMARY OF THE HDF5 CONFIGURATION
+	    =================================
+
+General Information:
+-------------------
+		   HDF5 Version: 1.8.19
+		  Configured on: Fri Oct 27 13:53:41 EDT 2017
+		  Configured by: ssuresh@c460login01
+		 Configure mode: production
+		    Host system: powerpc64le-unknown-linux-gnu
+	      Uname information: Linux c460login01 3.10.0-537.el7.bz1409122.1.ppc64le #1 SMP Wed Jan 4 13:45:33 EST 2017 ppc64le ppc64le ppc64le GNU/Linux
+		       Byte sex: little-endian
+		      Libraries: static, shared
+	     Installation point: /home/ssuresh/modules/HDF5/hdf5
+
+Compiling Options:
+------------------
+               Compilation Mode: production
+                     C Compiler: /shared/comms/openmpi-2.0.1/pgi/bin/mpicc ( built with gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC))
+                         CFLAGS: 
+                      H5_CFLAGS: -std=c99 -pedantic -Wall -Wextra -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -Winline -Wfloat-equal -Wmissing-format-attribute -Wmissing-noreturn -Wpacked -Wdisabled-optimization -Wformat=2 -Wunreachable-code -Wendif-labels -Wdeclaration-after-statement -Wold-style-definition -Winvalid-pch -Wvariadic-macros -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wunused-macros -Wunsafe-loop-optimizations -Wc++-compat -Wstrict-overflow -Wlogical-op -Wlarger-than=2048 -Wvla -Wsync-nand -Wframe-larger-than=16384 -Wpacked-bitfield-compat -Wstrict-overflow=5 -Wjump-misses-init -Wdouble-promotion -Wsuggest-attribute=const -Wtrampolines -Wstack-usage=8192 -Wvector-operation-performance -Wsuggest-attribute=pure -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -O3
+                      AM_CFLAGS: 
+                       CPPFLAGS: 
+                    H5_CPPFLAGS: -D_GNU_SOURCE -D_POSIX_C_SOURCE=200112L   -DNDEBUG -UH5_DEBUG_API
+                    AM_CPPFLAGS:  -I/home/ssuresh/modules/zlib/zlib1211//include -I/home/ssuresh/modules/slib/slib211//include
+               Shared C Library: yes
+               Static C Library: yes
+  Statically Linked Executables: no
+                        LDFLAGS: 
+                     H5_LDFLAGS: 
+                     AM_LDFLAGS:  -L/home/ssuresh/modules/zlib/zlib1211//lib -L/home/ssuresh/modules/slib/slib211//lib
+ 	 	Extra libraries: -lsz -lz -ldl -lm 
+ 		       Archiver: ar
+ 		 	 Ranlib: ranlib
+ 	      Debugged Packages: 
+		    API Tracing: no
+
+Languages:
+----------
+                        Fortran: no
+
+                            C++: no
+
+Features:
+---------
+                  Parallel HDF5: yes
+             High Level library: yes
+                   Threadsafety: no
+            Default API Mapping: v18
+ With Deprecated Public Symbols: yes
+         I/O filters (external): deflate(zlib),szip(encoder)
+                            MPE: 
+                     Direct VFD: no
+                        dmalloc: no
+Clear file buffers before write: yes
+           Using memory checker: no
+         Function Stack Tracing: no
+      Strict File Format Checks: no
+   Optimization Instrumentation: no

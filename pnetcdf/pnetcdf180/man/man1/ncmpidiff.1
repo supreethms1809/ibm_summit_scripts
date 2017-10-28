@@ -1,0 +1,44 @@
+.\" $Header$
+.nr yr \n(yr+1900
+.af mo 01
+.af dy 01
+.TH NCMPIDIFF 1 2013-11-17 "Printed: \n(yr-\n(mo-\n(dy" "UTILITIES"
+.SH NAME
+ncmpidiff \- compares two netCDF files in parallel
+.SH SYNOPSIS
+.ft B
+.HP
+mpiexec -n np ncmpidiff
+.nh
+\%[-b]
+\%[-q]
+\%[-h]
+\%[-v \fIvar1,...\fP]
+\%\fIfile1 file2\fP
+.hy
+.ft
+.SH DESCRIPTION
+\fBncmpidiff\fP runs in parallel using np number of MPI processes to compare the
+contents of the two files and reports the difference to the standard output.
+
+If neither argument -v nor -h is given besides the two file names, the entire
+files are compared.
+.SH OPTIONS
+.IP "\fB-b\fP"
+Verbose mode - print results (same or different) for all components (file, header, or variables) in comparison
+.IP "\fB-q\fP"
+Quiet mode - print nothing when two components in comparison are the same
+.IP "\fB-h\fP"
+Compare file header only
+.IP "\fB-v\fP \fIvar1,...,varn\fP"
+Compare only the given list of variables
+
+.SH "SEE ALSO"
+.LP
+.BR ncmpidump (1),
+.BR pnetcdf (3)
+.SH DATE
+$Date: 2016-12-18 19:49:08 -0600 (Sun, 18 Dec 2016) $
+.LP
+
+
